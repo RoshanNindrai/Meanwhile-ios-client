@@ -1,0 +1,99 @@
+# Xcode
+###########################
+DerivedData/
+*.xcuserdatad
+*.xcuserdata/
+*.xcworkspace/
+*.xccheckout
+*.moved-aside
+*.pbxuser
+!default.xcworkspace
+
+# Xcode iOS
+###########################
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+
+# Xcode project temp files
+###########################
+project.xcworkspace/
+xcuserdata/
+*.xcscmblueprint
+
+# Swift Package Manager
+###########################
+# Add this if you have dependencies managed by Swift Package Manager
+/.build/
+.swiftpm/xcode/package.resolved
+package.pins
+Package.resolved
+
+# Carthage
+###########################
+# Add this if you are using Carthage for dependencies
+Carthage/Build/
+Carthage/Checkouts/
+
+# CocoaPods
+###########################
+# Add this if you are using CocoaPods for dependencies
+Pods/
+Podfile.lock
+
+# Fastlane
+###########################
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Archives
+###########################
+*.xcarchive
+
+# Provisioning Profiles
+###########################
+*.mobileprovision
+*.provisionprofile
+
+# Symbolication
+###########################
+*.dSYM.zip
+*.dSYM
+
+# App files
+###########################
+*.ipa
+*.app
+
+# Playgrounds
+###########################
+timeline.xctimeline
+playground.xcworkspace
+
+# SwiftUI Previews
+###########################
+*.launch.json
+
+# User-specific files
+###########################
+*.swp
+*.swo
+*.DS_Store
+
+# IDEWorkspaceChecks
+###########################
+.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
+# Editor backups
+###########################
+*~.nib~
+*~.storyboard~
+*~.xib~
+*~.plist~
+
+# Logs
+###########################
+*.log
