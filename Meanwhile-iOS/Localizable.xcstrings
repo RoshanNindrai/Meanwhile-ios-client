@@ -1,0 +1,49 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "Agree_&_Continue": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agree & Continue"
+          }
+        }
+      }
+    },
+    "Read_our_Privacy_Policy_Tap_\"Agree_&_Continue\"_to_accept_the_Terms_of_Service": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read our Privacy Policy Tap \\\"Agree & Continue\\\" to accept the Terms of Service"
+          }
+        }
+      }
+    },
+    "Welcome_to_Meanwhile": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Welcome to Meanwhile"
+          }
+        }
+      }
+    },
+    "What_is_your_phone_number?": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What is your phone number?"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

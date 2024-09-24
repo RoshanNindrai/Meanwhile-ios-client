@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44242AFC2CA24F0C00954466 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 44242AFB2CA24F0C00954466 /* Localizable.xcstrings */; };
 		446AA0FC2CA01B5D00864225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446AA0FB2CA01B5D00864225 /* AppDelegate.swift */; };
 		446AA1002CA01B5E00864225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446AA0FF2CA01B5E00864225 /* Assets.xcassets */; };
 		446AA1032CA01B5E00864225 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446AA1022CA01B5E00864225 /* Preview Assets.xcassets */; };
@@ -43,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		44242AFB2CA24F0C00954466 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		446AA0F82CA01B5D00864225 /* Meanwhile-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meanwhile-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		446AA0FB2CA01B5D00864225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		446AA0FF2CA01B5E00864225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		446AA0FA2CA01B5D00864225 /* Meanwhile-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				44242AFB2CA24F0C00954466 /* Localizable.xcstrings */,
 				446D69812CA16C1B00E0B0A9 /* Meanwhile-iOS.entitlements */,
 				446D697E2CA165B500E0B0A9 /* Containers */,
 				446D697B2CA1651200E0B0A9 /* Managers */,
@@ -240,6 +243,7 @@
 			files = (
 				446AA1032CA01B5E00864225 /* Preview Assets.xcassets in Resources */,
 				446AA1002CA01B5E00864225 /* Assets.xcassets in Resources */,
+				44242AFC2CA24F0C00954466 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

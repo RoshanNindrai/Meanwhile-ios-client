@@ -19,7 +19,7 @@ struct OnboardingView: View {
     
     var body: some View {
         VStack {
-            Text("What is your phone number?")
+            Text(LocalizedStringKey("What_is_your_phone_number?"))
                 .font(.caption)
                 .fontWeight(.bold)
                 .padding(.bottom, 24)

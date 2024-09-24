@@ -19,12 +19,12 @@ struct WelcomeView: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("Welcome to Meanwhile")
+            Text(LocalizedStringKey("Welcome_to_Meanwhile"))
                 .font(.title)
                 .fontWeight(.semibold)
                 .padding(.bottom, 24)
             
-            Text("Read our Privacy Policy Tap \"Agree & Continue\" to accept the Terms of Service")
+            Text(LocalizedStringKey("Read_our_Privacy_Policy_Tap_\"Agree_&_Continue\"_to_accept_the_Terms_of_Service"))
                 .font(.caption)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
@@ -33,7 +33,7 @@ struct WelcomeView: View {
             Button(action: {
                 store.actionSink.send(.didAgreeToTermsAndCondition)
             }) {
-                Text("Agree & Continue")
+                Text(LocalizedStringKey("Agree_&_Continue"))
                     .fontWeight(.bold)
                     .font(.headline)
                     .fontDesign(.rounded)
