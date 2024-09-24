@@ -24,6 +24,9 @@
 		446AA12F2CA0434B00864225 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446AA12E2CA0434B00864225 /* OnboardingScreen.swift */; };
 		446AA1312CA0435400864225 /* OnboardingWorkflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446AA1302CA0435400864225 /* OnboardingWorkflow.swift */; };
 		446AA13A2CA0B30100864225 /* Screen+BackStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446AA1392CA0B30100864225 /* Screen+BackStack.swift */; };
+		446D697D2CA1652300E0B0A9 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446D697C2CA1652300E0B0A9 /* NotificationManager.swift */; };
+		446D69802CA165D300E0B0A9 /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446D697F2CA165D300E0B0A9 /* AppDependencyContainer.swift */; };
+		446D69842CA171C500E0B0A9 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 446D69832CA171C500E0B0A9 /* iPhoneNumberField */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,6 +53,9 @@
 		446AA12E2CA0434B00864225 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 		446AA1302CA0435400864225 /* OnboardingWorkflow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingWorkflow.swift; sourceTree = "<group>"; };
 		446AA1392CA0B30100864225 /* Screen+BackStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Screen+BackStack.swift"; sourceTree = "<group>"; };
+		446D697C2CA1652300E0B0A9 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		446D697F2CA165D300E0B0A9 /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		446D69812CA16C1B00E0B0A9 /* Meanwhile-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Meanwhile-iOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 				446AA1282CA03AF500864225 /* Alamofire in Frameworks */,
 				446AA11F2CA01E3B00864225 /* WorkflowUI in Frameworks */,
 				446AA10F2CA01E3B00864225 /* Workflow in Frameworks */,
+				446D69842CA171C500E0B0A9 /* iPhoneNumberField in Frameworks */,
 				446AA10B2CA01E3B00864225 /* ViewEnvironment in Frameworks */,
 				446AA10D2CA01E3B00864225 /* ViewEnvironmentUI in Frameworks */,
 				446AA1112CA01E3B00864225 /* WorkflowCombine in Frameworks */,
@@ -91,6 +98,9 @@
 		446AA0FA2CA01B5D00864225 /* Meanwhile-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				446D69812CA16C1B00E0B0A9 /* Meanwhile-iOS.entitlements */,
+				446D697E2CA165B500E0B0A9 /* Containers */,
+				446D697B2CA1651200E0B0A9 /* Managers */,
 				446AA1382CA0B2E800864225 /* extensions */,
 				446AA1202CA0203900864225 /* Welcome */,
 				446AA12D2CA0432200864225 /* Onboarding */,
@@ -136,6 +146,22 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		446D697B2CA1651200E0B0A9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				446D697C2CA1652300E0B0A9 /* NotificationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		446D697E2CA165B500E0B0A9 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				446D697F2CA165D300E0B0A9 /* AppDependencyContainer.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +189,7 @@
 				446AA11A2CA01E3B00864225 /* WorkflowSwiftUIExperimental */,
 				446AA11E2CA01E3B00864225 /* WorkflowUI */,
 				446AA1272CA03AF500864225 /* Alamofire */,
+				446D69832CA171C500E0B0A9 /* iPhoneNumberField */,
 			);
 			productName = "Meanwhile-iOS";
 			productReference = 446AA0F82CA01B5D00864225 /* Meanwhile-iOS.app */;
@@ -195,6 +222,7 @@
 			packageReferences = (
 				446AA1092CA01E3B00864225 /* XCRemoteSwiftPackageReference "workflow-swift" */,
 				446AA1262CA03AF500864225 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				446D69822CA171C500E0B0A9 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
 			);
 			productRefGroup = 446AA0F92CA01B5D00864225 /* Products */;
 			projectDirPath = "";
@@ -224,8 +252,10 @@
 			files = (
 				446AA0FC2CA01B5D00864225 /* AppDelegate.swift in Sources */,
 				446AA1242CA022CD00864225 /* WelcomeScreen.swift in Sources */,
+				446D69802CA165D300E0B0A9 /* AppDependencyContainer.swift in Sources */,
 				446AA12F2CA0434B00864225 /* OnboardingScreen.swift in Sources */,
 				446AA1312CA0435400864225 /* OnboardingWorkflow.swift in Sources */,
+				446D697D2CA1652300E0B0A9 /* NotificationManager.swift in Sources */,
 				446AA1222CA0206700864225 /* WelcomeWorkflow.swift in Sources */,
 				446AA13A2CA0B30100864225 /* Screen+BackStack.swift in Sources */,
 			);
@@ -358,6 +388,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Meanwhile-iOS/Meanwhile-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Meanwhile-iOS/Preview Content\"";
@@ -365,6 +396,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Meanwhile-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -388,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Meanwhile-iOS/Meanwhile-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Meanwhile-iOS/Preview Content\"";
@@ -395,6 +428,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Meanwhile-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -453,6 +487,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		446D69822CA171C500E0B0A9 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -500,6 +542,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 446AA1262CA03AF500864225 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		446D69832CA171C500E0B0A9 /* iPhoneNumberField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 446D69822CA171C500E0B0A9 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			productName = iPhoneNumberField;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

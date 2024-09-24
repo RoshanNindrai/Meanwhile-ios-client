@@ -24,7 +24,7 @@ struct WelcomeView: View {
                 .fontWeight(.semibold)
                 .padding(.bottom, 24)
             
-            Text("Read our Privacy Policy. Tap \"Agree & Continue\" to accept the Terms of Service.")
+            Text("Read our Privacy Policy Tap \"Agree & Continue\" to accept the Terms of Service")
                 .font(.caption)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)
@@ -48,6 +48,6 @@ struct WelcomeView: View {
 }
 
 #Preview {
-    WelcomeWorkflow()
+    WelcomeWorkflow(dependencyContainer: AppDependencyContainer(application: .shared))
         .workflowPreview()
 }

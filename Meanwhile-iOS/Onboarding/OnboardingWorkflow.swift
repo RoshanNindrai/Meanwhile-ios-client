@@ -4,21 +4,25 @@ import WorkflowUI
 import WorkflowSwiftUI
 
 struct OnboardingWorkflow: Workflow {
-    enum Output {
-        case didTapBackButton
-    }
+    let dependencyContainer: AppDependencyContainer
 }
 
 // MARK: State
 
 extension OnboardingWorkflow {
     @ObservableState
-    enum State {
-        case initialized
+    struct State {
+        enum ScreenState {
+            case initialized
+        }
+        
+        var screenState: ScreenState
+        var deviceToken: String?
+        var phoneNumber: String?
     }
     
     func makeInitialState() -> State {
-        .initialized
+        State(screenState: .initialized)
     }
 }
 
@@ -27,14 +31,8 @@ extension OnboardingWorkflow {
 extension OnboardingWorkflow {
     enum Action: WorkflowAction {
         typealias WorkflowType = OnboardingWorkflow
-        
-        case tappedBackButton
-        
         func apply(toState state: inout OnboardingWorkflow.State) -> OnboardingWorkflow.Output? {
-            switch self {
-            case .tappedBackButton:
-                return .didTapBackButton
-            }
+            nil
         }
     }
 }
@@ -46,9 +44,14 @@ extension OnboardingWorkflow {
 
     func render(state: State, context: RenderContext<OnboardingWorkflow>) -> Rendering {
         
-        switch state {
+        switch state.screenState {
         case .initialized:
-            break
+            context.runSideEffect(key: "RemoteNotificationRegistration") { lifetime in
+                guard !lifetime.hasEnded else { return }
+                dependencyContainer.notificationManger.requestNotificationPermission { deviceNotificationToken in
+                    print(deviceNotificationToken)
+                }
+            }
         }
         
         return OnboardingScreen(

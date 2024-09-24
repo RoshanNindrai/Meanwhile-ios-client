@@ -5,6 +5,7 @@ import WorkflowSwiftUI
 
 struct WelcomeWorkflow: Workflow {
     typealias Output = Never
+    let dependencyContainer: AppDependencyContainer
 }
 
 // MARK: State
@@ -58,15 +59,10 @@ extension WelcomeWorkflow {
             break
         case .proceedToOnboarding:
             childScreens.append(
-                OnboardingWorkflow()
-                    .mapOutput { output -> Action in
-                        switch output {
-                        case .didTapBackButton:
-                            return .initialize
-                        }
-                    }
+                OnboardingWorkflow(dependencyContainer: dependencyContainer)
                     .rendered(in: context)
                     .asBackStackContentScreen(
+                        title: "Enter Your Phone Number",
                         hideBackButton: true
                     )
                 )
@@ -75,8 +71,7 @@ extension WelcomeWorkflow {
         return WelcomeScreen(
             model: WelcomeScreenModel(
                 accessor: context.makeStateAccessor(state: state),
-                actionSink: actionSink,
-                onboardingScreenModel: nil
+                actionSink: actionSink
             )
         )
         .asBackStack()
@@ -90,5 +85,4 @@ struct WelcomeScreenModel: ObservableModel {
     
     let accessor: StateAccessor<State>
     let actionSink: Sink<WelcomeWorkflow.Action>
-    let onboardingScreenModel: OnboardingScreenModel?
 }
