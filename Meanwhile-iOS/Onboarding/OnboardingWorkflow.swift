@@ -59,7 +59,10 @@ extension OnboardingWorkflow {
                 accessor: context.makeStateAccessor(state: state),
                 actionSink: context.makeSink(of: Action.self)
             )
-        ).asAnyScreen()
+        ).asBackStack(
+            key: "OnboardingWorkflow"
+        )
+        .asAnyScreen()
     }
 }
 

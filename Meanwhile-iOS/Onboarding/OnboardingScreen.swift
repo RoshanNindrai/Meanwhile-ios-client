@@ -18,21 +18,33 @@ struct OnboardingView: View {
     @FocusState var isEditingPhoneNumber: Bool
     
     var body: some View {
-        VStack {
-            Text(LocalizedStringKey("What_is_your_phone_number?"))
-                .font(.caption)
-                .fontWeight(.bold)
-                .padding(.bottom, 24)
-                        
-            iPhoneNumberField("Your phone number", text: $phoneNumber, formatted: false)
-                        .flagHidden(false)
-                        .flagSelectable(true)
-                        .clearButtonMode(.whileEditing)
-                        .onClear { _ in isEditingPhoneNumber.toggle() }
-                        .focused($isEditingPhoneNumber)
-                        .padding()
-                        .cornerRadius(10)
-                        .padding()
+        NavigationStack{
+            VStack {
+                Text(LocalizedStringKey("Meanwhile_will_need_to_verify_your_account__Carrier_charges_may_apply_"))
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .fontWeight(.bold)
+                    .padding(.bottom, 24)
+                    .padding(.horizontal, 24)
+                
+                            
+                iPhoneNumberField("Your phone number", text: $phoneNumber, formatted: false)
+                    .flagHidden(false)
+                    .flagSelectable(true)
+                    .clearButtonMode(.whileEditing)
+                    .onClear { _ in isEditingPhoneNumber.toggle() }
+                    .focused($isEditingPhoneNumber)
+                    .padding()
+                    .cornerRadius(10)
+                    .padding()
+                
+                Spacer()
+                
+                Button("Next") {
+                    
+                }
+
+            }
         }.onAppear {
             triggerEditingMode()
         }.containerRelativeFrame(
